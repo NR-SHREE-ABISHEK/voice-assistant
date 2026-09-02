@@ -1,29 +1,20 @@
 import datetime
 import os
 import pyttsx3
-
-# Create voice engine
 engine = pyttsx3.init()
-
-
 def speak(text):
     print("Jarvis:", text)
     engine.say(text)
     engine.runAndWait()
-
-
 speak("Jarvis Activated")
-
 while True:
     command = input("\nEnter command: ").lower()
-
-    if "time" in command:
-        now = datetime.datetime.now()
-        current_time = now.strftime("%I:%M %p")
-        speak("Current time is " + current_time)
-
-    elif "who are you" in command:
-        speak("I am an AI assistant")
+        if "time" in command:
+            now = datetime.datetime.now()
+            current_time = now.strftime("%I:%M %p")
+            speak("Current time is " + current_time)
+        elif "who are you" in command:
+             speak("I am an AI assistant")
 
     elif "say about my self" in command:
         speak("You are a young developer aiming to create AI and your name is Abishek")
