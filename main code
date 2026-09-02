@@ -9,31 +9,25 @@ def speak(text):
 speak("Jarvis Activated")
 while True:
     command = input("\nEnter command: ").lower()
-        if "time" in command:
-            now = datetime.datetime.now()
-            current_time = now.strftime("%I:%M %p")
-            speak("Current time is " + current_time)
-        elif "who are you" in command:
-             speak("I am an AI assistant")
-
+    if "time" in command:
+        now = datetime.datetime.now()
+        current_time = now.strftime("%I:%M %p")
+        speak("Current time is " + current_time)
+    elif "who are you" in command:
+        speak("I am an AI assistant")
     elif "say about my self" in command:
         speak("You are a young developer aiming to create AI and your name is Abishek")
-
     elif "open spotify" in command:
         speak("Vaa pulla vaa")
         os.system("start https://open.spotify.com/")
-
     elif "open my github" in command:
         speak("Nee massu thala, wait pannu thala")
         os.system("start https://github.com/HR-SHREE-ABISHEK")
-
     elif "youtube" in command:
         speak("Wait pannu da pulla")
         os.system("start https://www.youtube.com/")
-
     elif "bye" in command or "exit" in command:
         speak("Goodbye boss")
         break
-
     else:
         speak("Enna puriyala da pulla")
