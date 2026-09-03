@@ -3,10 +3,10 @@ import os
 import pyttsx3
 engine = pyttsx3.init()
 def speak(text):
-    print("Jarvis:", text)
+    print("bava:", text)
     engine.say(text)
     engine.runAndWait()
-speak("Jarvis Activated")
+speak("bava Activated")
 while True:
     command = input("\nEnter command: ").lower()
     if "time" in command:
